@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Services</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>DonutCash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
-<script src="script.js" defer></script>
-
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -24,82 +21,142 @@
 
 <nav>
 
-<div class="logo">
-🍩 DONUT<span>CASH</span>
-</div>
+    <div class="logo">
+        🍩 DONUT<span>SERVICES</span>
+    </div>
 
-<div class="menu">
+    <div class="nav-buttons">
 
-<a href="#">Home</a>
-<a href="#">Games</a>
-<a href="#">Leaderboard</a>
-<a href="#">FAQ</a>
+        <a href="#services">Services</a>
+        <a href="#order">Order</a>
 
-</div>
-
-<div class="buttons">
-
-<button class="login">
-Login
-</button>
-
-<button class="register">
-Register
-</button>
-
-</div>
+    </div>
 
 </nav>
 
 <section class="hero">
 
-<div class="hero-left">
+    <h1>
+        Professional Minecraft
+        <span>Building Services</span>
+    </h1>
 
-<div class="small-title">
+    <p>
 
-MINECRAFT VIRTUAL COINS
+        Fast, trusted and professional Minecraft services.
+        From custom base building to massive dig-out projects.
 
-</div>
-
-<h1>
-
-The Next Generation
-
-<span>Gaming Experience</span>
-
-</h1>
-
-<p>
-
-Play exciting Minecraft-themed mini-games, climb the leaderboards, and earn virtual rewards in a premium experience.
-
-</p>
-
-<div class="hero-buttons">
-
-<button class="play">
-
-Play Now
-
-</button>
-
-<button class="learn">
-
-Learn More
-
-</button>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<div class="glow-circle"></div>
-
-</div>
+    </p>
 
 </section>
+
+<section id="services" class="services">
+
+    <div class="service-card">
+
+        <div class="emoji">🏰</div>
+
+        <h2>Base Building</h2>
+
+        <p>
+
+            Need a custom base?
+
+            We build starter bases,
+            mega bases,
+            hidden bases,
+            PvP bases,
+            and survival builds.
+
+        </p>
+
+        <ul>
+
+            <li>✔ Custom Designs</li>
+            <li>✔ High Quality</li>
+            <li>✔ Fast Service</li>
+            <li>✔ Survival & PvP</li>
+
+        </ul>
+
+    </div>
+
+    <div class="service-card">
+
+        <div class="emoji">⛏️</div>
+
+        <h2>Area Dig-Out</h2>
+
+        <p>
+
+            Need thousands of blocks removed?
+
+            We excavate any size project
+            with precision.
+
+        </p>
+
+        <ul>
+
+            <li>✔ Any Dimensions</li>
+            <li>✔ Large Projects</li>
+            <li>✔ Fast Completion</li>
+            <li>✔ Completion time depends on project size.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section id="order" class="order">
+
+    <h2>Order a Service</h2>
+
+    <p>
+
+        Fill in the information below and contact us.
+
+    </p>
+
+    <form>
+
+        <input
+        type="text"
+        placeholder="Minecraft Username">
+
+        <input
+        type="text"
+        placeholder="Discord Username">
+
+        <select>
+
+            <option>Choose Service</option>
+
+            <option>Base Building</option>
+
+            <option>Area Dig-Out</option>
+
+        </select>
+
+        <textarea
+        placeholder="Describe your project..."></textarea>
+
+        <button type="button" id="contactBtn">
+
+            Contact Me
+
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+© 2026 Donut Services
+
+</footer>
 
 </body>
 </html>
