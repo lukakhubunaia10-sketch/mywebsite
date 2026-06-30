@@ -1,90 +1,25 @@
-body{
-    opacity:0;
-    transition:opacity .8s ease;}
-// ==========================
-// DONUTCASH PART 1
-// ==========================
-
 // Fade in page
 window.addEventListener("load", () => {
     document.body.style.opacity = "1";
 });
 
-// Create cursor glow
-const glow = document.createElement("div");
+// Smooth button animation
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        button.style.transform = "translateY(-3px) scale(1.03)";
+    });
 
-glow.style.position = "fixed";
-glow.style.width = "250px";
-glow.style.height = "250px";
-glow.style.borderRadius = "50%";
-glow.style.pointerEvents = "none";
-glow.style.background =
-"radial-gradient(circle, rgba(170,80,255,.18), transparent 70%)";
-
-glow.style.filter = "blur(20px)";
-glow.style.zIndex = "0";
-
-document.body.appendChild(glow);
-
-document.addEventListener("mousemove",(e)=>{
-
-glow.style.left = (e.clientX-125)+"px";
-glow.style.top = (e.clientY-125)+"px";
-
+    button.addEventListener("mouseleave", () => {
+        button.style.transform = "translateY(0) scale(1)";
+    });
 });
 
-// Button animation
+// Glow effect follows mouse
+document.addEventListener("mousemove", (e) => {
+    const bg = document.querySelector(".background");
 
-document.querySelectorAll("button").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-4px) scale(1.03)";
-
+    if (bg) {
+        bg.style.backgroundPosition =
+            `${50 + e.clientX / 60}px ${50 + e.clientY / 60}px`;
+    }
 });
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="";
-
-});
-
-});
-
-// Smooth scrolling
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-
-anchor.addEventListener("click",function(e){
-
-e.preventDefault();
-
-const target=document.querySelector(this.getAttribute("href"));
-
-if(target){
-
-target.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-}
-
-});
-
-});
-
-// Floating hero animation
-
-const hero=document.querySelector(".hero");
-
-let offset=0;
-
-setInterval(()=>{
-
-offset+=0.03;
-
-hero.style.transform=`translateY(${Math.sin(offset)*3}px)`;
-
-},20);
